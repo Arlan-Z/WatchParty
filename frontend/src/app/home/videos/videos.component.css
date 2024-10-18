@@ -1,0 +1,14 @@
+.body {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 1vmin; 
+    justify-content: center; 
+    align-content: center; 
+    justify-items: center; 
+    align-items: center; 
+    height: 100vh; 
+}
+
+video-card {
+    margin: 1vmin;
+}
