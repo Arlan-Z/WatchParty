@@ -1,7 +1,25 @@
-.home-header{
+home-header {
     width: 100%;
+    background-color: var(--dark-purple-header);
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    z-index: 1000; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-main{
-    background: var(--primary-color);
+:host {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: var(--primary-color);
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10vmin;
 }

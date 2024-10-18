@@ -71,7 +71,12 @@
     transition: 0.5s;
 }
 
-.help:hover, .login-btn:hover{
+.help:hover, .login-btn:hover, h1:hover{
     filter: brightness(0.8);
     cursor: pointer;
+}
+
+h1{
+    cursor: pointer;
+    transition: 0.5s;
 }
