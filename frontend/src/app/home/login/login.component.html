@@ -4,7 +4,7 @@
       <form (submit)="onSubmit()">
         <div class="form-group">
           <label for="username">Username</label>
-          <input type="text" id="username" [(ngModel)]="username" name="username" required />
+          <input type="text" id="username" [(ngModel)]="username" (keydown)="validateUsername()" name="username"  [ngClass]="{'red': loginError}" required />
         </div>
         <div class="form-group">
           <label for="password">Password</label>
