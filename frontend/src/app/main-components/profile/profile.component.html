@@ -1,0 +1,6 @@
+<div class="profile-container">
+    <h2>Your Profile</h2>
+    <p *ngIf="userName$ | async as userName">Username: {{ userName }}</p>
+    <p>This is your profile page</p>
+    <button class="button" (click)="logout()">Logout</button> <!-- Кнопка Logout -->
+  </div>

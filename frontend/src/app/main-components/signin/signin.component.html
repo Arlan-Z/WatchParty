@@ -1,0 +1,34 @@
+<div class="container">
+    <form #f="ngForm" (ngSubmit)="onSubmit()">
+      <h2>{{ isSignIn ? 'Sign In' : 'Sign Up' }}</h2>
+  
+      <div *ngIf="!isSignIn">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" [(ngModel)]="user.username" required>
+      </div>
+  
+  
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" [(ngModel)]="user.email" required>
+  
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" [(ngModel)]="user.password" required>
+  
+      <div *ngIf="!isSignIn">
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" [(ngModel)]="user.confirmPassword" required>
+      </div>
+  
+      <button type="submit">{{ isSignIn ? 'Sign In' : 'Sign Up' }}</button>
+  
+  
+      <p>
+        {{ isSignIn ? "Don't have an account?" : "Already have an account?" }}
+        <button type="button" class="toggle-btn" (click)="toggleMode()">
+          {{ isSignIn ? 'Sign Up' : 'Sign In' }}
+        </button>
+      </p>
+  
+  
+    </form>
+  </div>

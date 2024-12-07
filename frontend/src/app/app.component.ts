@@ -1,13 +1,30 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
+import { HeaderComponent } from "./common-ui/header/header.component";
+import { CommonModule } from '@angular/common';
+import { AuthService } from './services/auth-service/auth.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [HeaderComponent, CommonModule, RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'frontend';
+  isLoggedIn$: Observable<boolean>; 
+
+  constructor(private router: Router, private authService: AuthService) {
+    this.isLoggedIn$ = this.authService.isLoggedIn$;
+  }
+
+  shouldShowHeader(): boolean {
+    const excludedRoutes = ['/login', '/register'];
+    return !excludedRoutes.includes(this.router.url);
+  }
+
+  logout() {
+    this.authService.logout();
+  }
 }

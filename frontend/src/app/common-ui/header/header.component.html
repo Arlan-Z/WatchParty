@@ -1,0 +1,18 @@
+<nav>
+  <div class="logo">WatchParty</div>
+<ul>
+  <li><a routerLink="/">Home</a></li>
+  <li><a routerLink="/rooms">Rooms</a></li>
+  <li><a routerLink="/about">About Us</a></li>
+</ul>
+<div *ngIf="(isLoggedIn$ | async) === true; else signin">
+  <a routerLink="/profile">
+     <span>{{ userName$ | async }} </span>
+     <fa-icon [icon]="faUser"></fa-icon>
+  </a>
+</div>
+<ng-template #signin>
+  <a class="sign-in" routerLink="/signin">Sign In ></a>
+</ng-template>
+<div class="indicator"></div>
+</nav>

@@ -1,14 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+@font-face {
+    font-family: 'Leckerli One';
+    src: url("../public/assets/fonts/Leckerli_One/LeckerliOne-Regular.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
-:root{
-    --dark-purple-header: #433145;
-    --primary-color: #683C6E;
+/* [data-theme=light] {
+
+} */
+
+:root {
+    --bg-color: #1A1A1A;
+    --primary-color: #282828;
+    --header-line-stroke-color: #FFFFFF;
+    --button-line-stroke-color: #eeeeeeBF;
+    --button-text-color: #eeeeee56;
+    --main-text-color: #eeeeee;
+    --sub-text-color: #ffffff;
+    --stroke-color: #FFFFFF;
+    --logo-color: #FFFFFF;
+    --logo-shadow-color: #FFFFFF40;
+    --green-color: #198754;
 }
 
 html, body, main {
     height: 100%;
     margin: 0;
     padding: 0;
+    background-color: var(--bg-color);
 }
 
 main {

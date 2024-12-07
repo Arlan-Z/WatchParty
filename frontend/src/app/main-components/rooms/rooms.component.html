@@ -1,0 +1,12 @@
+<div class="rooms-container">
+    <div *ngFor="let room of rooms" class="room-card">
+      <img [src]="room.image" [alt]="room.title">
+      <div class="room-info">
+        <h3>{{ room.title }}</h3>
+        <div class="users">
+            <fa-icon *ngFor="let i of [].constructor(getUserCount(room))" [icon]="faUser"></fa-icon>
+          <span *ngIf="room.users > 3">+{{ room.users - 3 }}</span>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,14 +1,15 @@
 import { Routes } from '@angular/router';
-import { MainComponent } from './home/main/main.component';
-import { LoginComponent } from './home/login/login.component';
-import { AboutComponent } from './home/about/about.component';
-import { VideosComponent } from './home/videos/videos.component';
+import { HomeComponent } from './main-components/home/home.component';
+import { RoomsComponent } from './main-components/rooms/rooms.component';
+import { AboutUsComponent } from './main-components/about/about.component';
+import { SigninComponent } from './main-components/signin/signin.component';
+import { ProfileComponent } from './main-components/profile/profile.component';
 
 export const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
-  {path:'home', component: MainComponent, children: [
-    {path: '', component: VideosComponent},
-    {path: 'login', component: LoginComponent},
-    {path:'about', component: AboutComponent}
-  ]},
+  {path:'home', component: HomeComponent,  pathMatch: 'full'},
+  {path:'rooms', component: RoomsComponent,  pathMatch: 'full'},
+  {path:'about', component: AboutUsComponent,  pathMatch: 'full'},
+  { path: 'signin', component: SigninComponent, pathMatch: 'full' },
+  { path: 'profile', component: ProfileComponent, pathMatch: 'full' } 
 ];

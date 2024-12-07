@@ -1,0 +1,47 @@
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    min-height: 100vh; 
+    background-color: var(--bg-color);
+    color: var(--main-text-color); 
+    padding: 20px;
+    font-family: sans-serif;  
+  }
+  
+  .profile-container h2 {
+    margin-bottom: 20px;
+    font-size: 2em; 
+    text-shadow: 1px 1px 2px #000;
+  }
+  
+  .profile-container p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+  
+  .avatar {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+  }
+  
+  .button {
+      background-color: var(--green-color);
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+      font-family: sans-serif;
+      transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+      background-color: darken(var(--green-color), 10%);
+  }

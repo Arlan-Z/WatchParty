@@ -1,0 +1,60 @@
+.home-container {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 20px;
+    padding: 20px;
+    background-color: var(--bg-color);
+    color: var(--main-text-color);
+    font-family: sans-serif;
+
+    @media (min-width: 768px) { 
+        grid-template-columns: repeat(2, 1fr);  
+        & > :first-child {
+            grid-column: 1 / span 2; 
+        }
+    }
+}
+
+.card {
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    align-items: flex-start; 
+    text-align: left;
+    position: relative;
+}
+
+.card img {
+    position: absolute;
+    max-width: 150px;
+    height: auto;
+    align-self: center; 
+    right: 0;
+    bottom: 15px;
+}
+
+.explore-button, .signin-button {
+    background-color: var(--green-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-family: sans-serif;
+    transition: 0.3s ease;
+}
+
+.explore-button:hover, .signin-button:hover {
+    filter: brightness(0.7);
+}
+
+.about-link {
+    color: var(--green-color);
+    text-decoration: none;
+    cursor: pointer;
+}
